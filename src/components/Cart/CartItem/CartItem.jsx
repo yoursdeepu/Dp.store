@@ -16,7 +16,7 @@ const CartItem = () => {
                 <span className="name">Product name</span>
                 <MdClose className="close-btn" />
                 <div className="quantity-buttons">
-                    <span>-</span>
+                    <span onClick={()=>setCart(cart-1)} >-</span>
                     <span>{cart}</span>
                     <span onClick={()=>setCart(cart+1)} >+</span>
                 </div>
