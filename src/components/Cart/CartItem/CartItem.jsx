@@ -1,8 +1,12 @@
 import "./CartItem.scss";
 import { MdClose } from "react-icons/md";
 import prod from "../../../assets/products/earbuds-prod-1.webp"
+import { useState } from "react";
 
 const CartItem = () => {
+    const [cart,setCart] =useState(0)
+
+
     return <div className="cart-products">
         <div className="cart-product">
             <div className="img-container">
@@ -13,8 +17,8 @@ const CartItem = () => {
                 <MdClose className="close-btn" />
                 <div className="quantity-buttons">
                     <span>-</span>
-                    <span>5</span>
-                    <span>+</span>
+                    <span>{cart}</span>
+                    <span onClick={()=>setCart(cart+1)} >+</span>
                 </div>
                 <div className="text">
                     <span>3</span>
